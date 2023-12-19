@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,400&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
@@ -77,10 +79,155 @@ h6 {
 	font-weight: 400;
 }
 
-.container {
-    display: flex;
+body{
+	background-color: #392156;
+	font-family: 'Nunito', sans-serif;
+	color: #EAE0CC;
+	font-weight: 500;
+	height:100vh;
+	
 }
+.header{
+	background-color: #5D2784;
+}
+.section{
+	min-height: 86vh;
+}
+.container {
+	width: 100%;
+	max-width: 1161px;
+	margin: 0 auto;
+}
+.header-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+	font-style: italic;
+	
+}
+.header-logo-img{
+	max-width: 150px;
+}	
+
 .left_side{
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+}
+.left_side-input{
+	background-color: #EAE0CC;
+	padding: 0.5rem 1rem;
+	font-size: 18px;
+	border-radius: 10px;
+	margin: 0.5rem 0;
+	transition: all 0.5s ease-in-out;
+
+}
+.left_side-input:focus{
+	box-shadow: 0px 0px 15px 7px #5D2784;
+}
+
+.left_side label{
+	background-color: #D1B2E0;
+	text-align: center;
+	color: #fff;
+	
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+
+}
+.left_side label:hover{
+	background-color: #000;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+.left_side-button{
+	background-color: #ffffff;
+	padding: 0.5rem 1rem;
+	font-size: 18px;
+	color:#5D2784;
+	border-radius: 10px;
+	margin: 0.5rem 0;
+	transition: all 0.5s ease-in-out;
+}
+.left_side-button:hover{
+	background-color: aquamarine;
+	
+}
+
+.left_side-input-file{
+	visibility: hidden;
+	position: absolute;
+	z-index: -1;
+	
+}
+.section-wrapper{
+	display: flex;
+}
+#card {
+	background: #fff;
+	max-width: 371px;
+	transition: var(--transition);
+	padding: 0.5rem;
+	border-radius: 12px 12px 12px 12px;
+}
+.card:hover {
+	transform: translateY(-10px);
+	box-shadow: var(--shadow);
+}
+.card-img {
+	width: 100%;
+	display: block;
+}
+.right_side {
+	display: flex;
+	gap: 24px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin-left: 2rem;
+	margin-top: 2.5rem;
+}
+.card-title{
+	font-size: 20px;
+	padding: 0.5rem 0;
+	color: #000;
+}
+.card-des {
+	margin: 0;
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+#delet-button{
+	padding: 0.5rem 1rem;
+	font-size: 16px;
+	background-color: #5D2784;
+	border-radius: 12px;
+	font-weight: 500;
+	color: #EAE0CC;
+	transition: all 0.5s ease-in-out;
+
+}
+#delet-button:hover{
+	padding: 0.5rem 1rem;
+	font-size: 16px;
+	background-color: red;
+	border-radius: 12px;
+	font-weight: 500;
+	color: #EAE0CC;
+}
+.footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff9e;
+	padding: 20px 0;
+}
+.footer a{
+	color: #ffffff9e;
 }

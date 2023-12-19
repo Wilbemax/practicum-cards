@@ -1,7 +1,7 @@
 console.log('Starting');
 
-let name = document.querySelector('#inpuyName').value;
-let description = document.querySelector('#inputDescription').value;
+let name = document.querySelector('#inpuyName');
+let description = document.querySelector('#inputDescription');
 const image = document.querySelector('#inputImage');
 
 //-------------------реализаци через масивы по тз
@@ -10,8 +10,9 @@ let cardsDiscription = [];
 let cardsImage = [];
 let cardIndex = []
 
-const newCard = (name, description) => {
-   if (name || description === "") {
+const newCard = () => {
+    debugger
+   if ( ( description.value === "" || (name.value === ""))) {
        alert('Все поля должны быть заполнены');
        
    } else {
@@ -36,6 +37,7 @@ const newCard = (name, description) => {
 };
 
 image.addEventListener('change', function (event) {
+    
    // Получаем загруженный файл
    const file = event.target.files[0];
 
@@ -56,6 +58,7 @@ image.addEventListener('change', function (event) {
 
        // Вставляем URL изображения в компонент
        cardsImage.push(fileURL);
+       fileURL = ""
    };
 
    // Читаем содержимое файла
@@ -65,31 +68,34 @@ image.addEventListener('change', function (event) {
 });
 
 const displayCard = () => {
-   let cardContainer = document.querySelector('#card');
+    
+   let cardContainer = document.querySelector('#right_side');
 
    cardContainer.innerHTML = '';
 
    for (let i = 0; i < cardsName.length; i++) {
        let cardDiv = document.createElement('div');
+       cardDiv.id = 'card'
 
        {
            cardsImage[i] === 'Фотография не была звгруженна'
-               ? (cardDiv.innerHTML = ` <h3 class="card-title"> ${cardsName[i]} </h3> <p class="card-des">${cardsDiscription[i]}</p> <button class="delet-button" id="deled">удалить</button>`)
-               : (cardDiv.innerHTML = `<img class="card-img" src="${cardsImage[i]} alt="${cardsName[i]}/> <h3 class="card-title"> ${cardsName[i]} </h3> <p class="card-des">${cardsDiscription[i]}</p><button class="delet-button" id="deled">удалить</button>`);
+               ? (cardDiv.innerHTML = ` <h3 class="card-title"> ${cardsName[i]} </h3> <p class="card-des">${cardsDiscription[i]}</p> `)
+               : (cardDiv.innerHTML = `<img class="card-img" src="${cardsImage[i]} alt="${cardsName[i]}/> <h3 class="card-title"> ${cardsName[i]} </h3> <p class="card-des">${cardsDiscription[i]}</p>`);
        }
 
        // Добавляем кнопку удаления
-    //    let deleteButton = document.createElement('button');
-    //    deleteButton.textContent = 'Удалить';
-    //    deleteButton.addEventListener('click', function() {
-    //        deletCard(i);
-    //    });
-    //    cardDiv.appendChild(deleteButton);
+       let deleteButton = document.createElement('button');
+       deleteButton.textContent = 'Удалить';
+       deleteButton.id = 'delet-button'
+       deleteButton.addEventListener('click', function() {
+           deletCard(i);
+       });
+       cardDiv.appendChild(deleteButton);
 
-    //    cardContainer.appendChild(cardDiv);
-       document.querySelector("#deled").addEventListener("click", deletCard)
+       cardContainer.appendChild(cardDiv);
+   
    }
-   console.log('success 3');
+   console.log(cardIndex, cardsDiscription, cardsName, cardsImage);
 };
 
 document.querySelector('#button').addEventListener('click', newCard);

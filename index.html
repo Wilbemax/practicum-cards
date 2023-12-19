@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css" type="text/css"/>
-    <title>Создай свою карточку</title>
-</head>
-<body>
-    <div class="container">
-        <div class="left_side">
-            <input class="left_side-input" required type="text" id="inpuyName"/>
-            <input class="left_side-input" required type="text" id="inputDescription"/>
-            <input class="left_side-input-file" type="file" id="inputImage"/>
-            <button class="left_side-button" id="button">Создать</button>
-        </div>
-        <div class="right_side">
-            <div id="card" class="card">
-                
-            </div>
-        </div>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="./style.css"
+			type="text/css" />
+		<title>Создай свою карточку</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header-wrapper">
+					<a
+						href="https://wbm.netlify.app"
+						target="_blank"
+						class="header-logo">
+						<img
+							class="header-logo-img"
+							src="./assets/1213.png"
+							alt="WBM" />
+					</a>
+					<div class="header-hesh">#яндекс-практикум</div>
+				</div>
+			</div>
+		</header>
+		<section class="section">
+			<div class="container">
+				<div class="section-wrapper">
+					<div class="left_side">
+						<input
+							class="left_side-input"
+							required
+							type="text"
+							id="inpuyName" />
+						<input
+							class="left_side-input"
+							required
+							type="text"
+							id="inputDescription" />
+						<label class="left_side-input"
+							><input
+								class="left_side-input-file"
+								type="file"
+								id="inputImage" />
+							<p>Выбери обложку</p>
+						</label>
+						<button
+							class="left_side-button"
+							id="button">
+							Создать
+						</button>
+					</div>
+					<div  class="right_side" id="right_side">
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<a
+				target="_blank"
+				href="https://github.com/Wilbemax"
+				>©Коломиец Максим 2023</a
+			>
+		</footer>
 
-
-    <script src="script.js"></script>
-</body>
+		<script src="script.js"></script>
+	</body>
 </html>
