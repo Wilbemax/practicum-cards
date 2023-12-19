@@ -10,7 +10,7 @@ let cardsDiscription = [];
 let cardsImage = [];
 let cardIndex = []
 
-const newCard = () => {
+const newCard = (name, description) => {
    if (name || description === "") {
        alert('Все поля должны быть заполнены');
        
