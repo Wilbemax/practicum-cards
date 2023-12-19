@@ -21,7 +21,7 @@ const newCard = () => {
        cardIndex.push(cardsName.length)
    
        {
-           cardsImage === cardsImage
+           cardsImage === 0
                ? cardsImage.push('Фотография не была звгруженна')
                : cardsImage;
        }
