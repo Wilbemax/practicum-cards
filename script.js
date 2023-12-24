@@ -62,7 +62,7 @@ image.addEventListener('change', function (event) {
    // Добавляем обработчик события для успешного чтения файла
    reader.onload = function (event) {
        // Получаем URL содержимого файла
-       const fileURL = event.target.result;
+       let fileURL = event.target.result;
 
        // Вставляем URL изображения в компонент
        cardsImage.push(fileURL);
